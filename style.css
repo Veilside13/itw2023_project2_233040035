@@ -16,12 +16,16 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
  
 body {
   font-family: 'Poppins', sans-serif;
   background-color: white;
   color: #010101;
-  min-height: 5000px;
+  
 }
 
 /* Navbar */
@@ -88,6 +92,41 @@ body {
 
 #hamburger-menu {
   display: none;
+}
+
+/* search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  color: black;
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: black;
 }
 
 /* Hero Section */
@@ -251,6 +290,89 @@ body {
 
 /* End menu */
 
+
+/* Products Section */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products h2 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.products p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+
+.products .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icons a {
+  width: 4rem;
+  height: 4rem;
+  color: black;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icons a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.products .product-image {
+  padding: 1rem 0;
+}
+
+.products .product-image img {
+  height: 25rem;
+}
+
+.products .product-content h3 {
+  font-size: 2rem;
+}
+
+.products .product-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.products .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.products .product-price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
 /* Contact */
 .contact .row {
   display: flex;
@@ -298,6 +420,43 @@ body {
   background-color: var(--primary);
   cursor: pointer;
 }
+
+/* Footer */
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 0.8rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: var(--primary);
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
 
 /* Queries */
 
